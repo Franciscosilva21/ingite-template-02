@@ -16,10 +16,8 @@ interface GenreResponseProps {
   title: string;
 }
 
-
 export function App() {
   const [selectedGenreId, setSelectedGenreId] = useState(1);
-
   const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
 
   useEffect(() => {
@@ -35,7 +33,7 @@ export function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}> 
     <SideBar  selectedGenreId={ selectedGenreId} handleClickButton={handleClickButton} />
-    <Content selectedGenre={selectedGenre} selectedGenreId={selectedGenreId}/>
+    <Content  selectedGenre={selectedGenre} selectedGenreId={selectedGenreId}/>
     </div>
   )
 }
